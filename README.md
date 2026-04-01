@@ -6,14 +6,28 @@ Lưu trữ các custom commands (skills) cho Claude Code.
 
 ## Cài đặt trên máy mới (hoặc sau khi cài lại máy)
 
-Chạy 2 lệnh này trong Terminal:
+Chạy 3 lệnh này trong Terminal:
 
 ```bash
+git clone https://github.com/khoa789/trolycungcode_ck.git ~/Documents/my-claude-config
 mkdir -p ~/.claude/commands
 cp ~/Documents/my-claude-config/build-idea.md ~/.claude/commands/
 ```
 
 Mở Claude Code lên, gõ `/build-idea` là dùng được ngay.
+
+---
+
+## Khi thêm skill mới
+
+Copy file skill vào `~/.claude/commands/` và lưu backup vào folder này, rồi chạy:
+
+```bash
+cd ~/Documents/my-claude-config
+git add . && git commit -m "Add [tên skill]" && git push
+```
+
+GitHub sẽ luôn là bản mới nhất.
 
 ---
 
@@ -29,4 +43,3 @@ Mở Claude Code lên, gõ `/build-idea` là dùng được ngay.
 
 - Folder `~/.claude/commands/` là nơi Claude Code đọc tất cả custom commands
 - Mỗi file `.md` trong đó tương ứng với một lệnh `/tên-file`
-- Khi thêm skill mới: copy file vào `~/.claude/commands/` và lưu backup vào folder này
